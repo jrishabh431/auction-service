@@ -36,8 +36,8 @@ async function placeBid(event, context) {
 
   return {
     statusCode: 200,
-    body: JSON.stringify(placeBid),
+    body: JSON.stringify(updateAuction),
   }
 }
 
-export const handler = commonMiddlware(updateAuction)
+export const handler = commonMiddlware(placeBid)
