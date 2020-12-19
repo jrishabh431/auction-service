@@ -1,5 +1,7 @@
 import AWS from 'aws-sdk'
 import commonMiddlware from '../lib/commonMiddleware'
+import validator from '@middy/validator'
+import placeBidSchema from '../lib/schemas/placeBidSchema'
 import createError from 'http-errors'
 import { getAuctionById } from './getAuction'
 
@@ -44,4 +46,4 @@ async function placeBid(event, context) {
   }
 }
 
-export const handler = commonMiddlware(placeBid)
+export const handler = commonMiddlware(placeBid).use(validator({inputSchema}))
