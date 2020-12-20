@@ -1,14 +1,17 @@
-export default schema = {
-    properies: {
-        body: {
-            type: 'object',
-            properties: {
-                title: {
-                    type: 'string'
-                }
-            },
-            required: ['title']
-        }
+const schema = {
+    properties: {
+      body: {
+        type: 'object',
+        properties: {
+          title: {
+            type: 'string',
+          },
+        },
+        required: ['title'],
+      },
     },
-    required: ['body']
-}
+    required: ['body'],
+  };
+  
+  export default schema;
+  
